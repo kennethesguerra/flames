@@ -1,0 +1,82 @@
+@font-face {
+  font-family: appFont;
+  src: url(font/Sketch3D.otf);
+}
+
+#appname {
+	text-align: center;
+	font-family: appFont;
+	font-size: 80px;
+	color: red;
+}
+
+.result {
+	text-align: center;
+	padding-top: 20px;
+}
+
+#btnClose {
+	float: right;
+	padding-top: 70px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.computation {
+	padding-left: 20px;
+}
+
+@media (min-width: 576px) { 
+	.main-container {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 200px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.result_container {
+		background: #fff;
+		width: 200px;
+		min-height: 100px;
+		margin: 0 auto;
+		margin-top: 50px;
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 992px) { 
+	.main-container {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 10px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.result_container {
+		background: #fff;
+		width: 500px;
+		min-height: 300px;
+		margin: 0 auto;
+		margin-top: 100px;
+		overflow-y:scroll;
+	}
+}
+
+.backdrop_result {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+}
+
+.result_container {
+	background: #fff;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
