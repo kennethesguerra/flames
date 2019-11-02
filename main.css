@@ -41,7 +41,7 @@
 		min-height: 200px;
 		margin: 0 auto;
 		margin-top: 50px;
-		overflow: hidden;
+		overflow-y:scroll;
 	}
 }
 
@@ -60,7 +60,7 @@
 		min-height: 200px;
 		margin: 0 auto;
 		margin-top: 50px;
-		overflow: hidden;
+		overflow-y:scroll;
 	}
 
 }
