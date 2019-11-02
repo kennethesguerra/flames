@@ -95,6 +95,7 @@ var app = new Vue({
 			this.showResult = false;
 			this.your_name = "";
 			this.crush_name = "";
+			this.computation = "";
 		}
 	}
 });

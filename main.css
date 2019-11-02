@@ -28,7 +28,7 @@
 
 @media (min-width: 576px) { 
 	.main-container {
-		width: 500px;
+		width: inherit;
 		margin: 0 auto;
 		padding-top: 200px;
 		padding-left: 50px;
@@ -37,12 +37,32 @@
 
 	.result_container {
 		background: #fff;
-		width: 200px;
-		min-height: 100px;
+		width: 400px;
+		min-height: 200px;
 		margin: 0 auto;
 		margin-top: 50px;
 		overflow: hidden;
 	}
+}
+
+@media (min-width: 768px) { 
+	.main-container {
+		width: inherit;
+		margin: 0 auto;
+		padding-top: 200px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.result_container {
+		background: #fff;
+		width: 400px;
+		min-height: 200px;
+		margin: 0 auto;
+		margin-top: 50px;
+		overflow: hidden;
+	}
+
 }
 
 @media (min-width: 992px) { 
