@@ -73,7 +73,7 @@ var app = new Vue({
 				this.computation += "<span>" + result_your_name + "</span><br />";
 				this.computation += "<span>" + result_crush_name + "</span><br />";
 				this.computation += "<span>Total matched letters: " + total_matches + "</span><br />";
-				this.computation += "Count 1 to " + total_matches + " with the word FLAMES recursively until you reach " + total_matches + ".";
+				this.computation += "Count 1 to " + total_matches + " with the word FLAMES recursively.";
 
 
 				this.result = result;
