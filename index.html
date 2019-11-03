@@ -10,19 +10,19 @@
 	<body>
 		<div id="app" class="main-container">
 			<div class="row">
-				<h1 id="appname">{{ title }}</h1>
+				<h1 id="appname" class="app_name_size">{{ title }}</h1>
 				<form action="" method="">
 					<div class="form-group">
-						<label>Your Name:</label>
-						<input type="text" class="form-control input-lg" id="your_name" v-model="your_name" autocomplete="off" />
+						<label class="name_label">Your Name:</label>
+						<input type="text" class="form-control input-lg bigger_input" id="your_name" v-model="your_name" autocomplete="off" />
 
 					</div>
 					<div class="form-group">
-						<label>Your Crush Name:</label>
-						<input type="text" class="form-control input-lg" id="crush_name" v-model="crush_name" autocomplete="off" />
+						<label class="name_label">Your Crush Name:</label>
+						<input type="text" class="form-control input-lg bigger_input" id="crush_name" v-model="crush_name" autocomplete="off" />
 					</div>
 					<div class="form-group">
-						<button class="btn btn-primary btn-block btn-lg" v-on:click="checkResult">Submit</button>
+						<button class="btn btn-primary btn-block btn-lg bigger_btn" v-on:click.prevent="checkResult">Submit</button>
 					</div>
 				</form>
 				<div class="row">
@@ -32,10 +32,10 @@
 			<div id="showResult" class="backdrop_result" v-show="showResult">
 				<div id="result_container" class="result_container">
 					<div class="result">
-						<h1>{{ result }}</h1>
+						<h1 class="app_name_size">{{ result }}</h1>
 						<br />
 						<br />
-						<button class="btn btn-default btn-sm" v-on:click="viewComputation">
+						<button class="btn btn-default btn-sm" v-on:click.prevent="viewComputation">
 							View Computation
 						</button>
 					</div>
@@ -44,7 +44,7 @@
 						<span v-html="computation">
 					</div>
 					<div id="btnClose" class="btnClose">
-						<button class="btn btn-primary" v-on:click="closeResult">Close</button>
+						<button class="btn btn-primary" v-on:click.prevent="closeResult">Close</button>
 					</div>
 				</div>
 			</div>

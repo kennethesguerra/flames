@@ -16,8 +16,7 @@ var app = new Vue({
 		showComputation: false
 	}, 
 	methods: {
-		checkResult: function(e) {
-			e.preventDefault();
+		checkResult: function() {
 			var original_name = this.your_name;
 			var original_crush_name = this.crush_name;
 			var your_name = this.your_name.trim().toLowerCase().replace(/ /g, '');
@@ -72,6 +71,7 @@ var app = new Vue({
 
 				this.computation += "<span>" + result_your_name + "</span><br />";
 				this.computation += "<span>" + result_crush_name + "</span><br />";
+				this.computation += "---------------------------------------------<br />";
 				this.computation += "<span>Total matched letters: " + total_matches + "</span><br />";
 				this.computation += "Count 1 to " + total_matches + " with the word FLAMES recursively.";
 
@@ -80,8 +80,7 @@ var app = new Vue({
 				this.showResult = true;
 			}
 		}, 
-		viewComputation: function(e) {
-			e.preventDefault();
+		viewComputation: function() {
 			if (!this.showComputation) {
 				this.showComputation = true;
 			}
@@ -90,8 +89,7 @@ var app = new Vue({
 			}
 			
 		}, 
-		closeResult: function(e) {
-			e.preventDefault();
+		closeResult: function() {
 			this.showResult = false;
 			this.your_name = "";
 			this.crush_name = "";
@@ -143,14 +141,16 @@ function assessResult(total_letter_matches) {
  */
 function modifyNameFont(name, affected_letters) {
 	var result_name = "";
+	var lowercase_name = name.toLowerCase();
 
 	for (var i = 0; i < name.length; i++) {
-		var letter = name.charAt(i);
+		var letter = lowercase_name.charAt(i);
+		var actual_letter = name.charAt(i);
 		if (affected_letters.includes(letter)) {
-			result_name += "<span style='color: red'>" + letter + "</span>";
+			result_name += "<span style='color: red'>" + actual_letter + "</span>";
 		}
 		else {
-			result_name += letter;
+			result_name += actual_letter;
 		}
 	}
 
