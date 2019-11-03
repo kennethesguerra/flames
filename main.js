@@ -73,11 +73,15 @@ var app = new Vue({
 				this.computation += "<span>" + result_crush_name + "</span><br />";
 				this.computation += "---------------------------------------------<br />";
 				this.computation += "<span>Total matched letters: " + total_matches + "</span><br />";
-				this.computation += "Count 1 to " + total_matches + " with the word FLAMES recursively.";
+				if ("Strangers" != result) {
+					this.computation += "Count 1 to " + total_matches + " with the word FLAMES recursively.";
+				}
+				else {
+					this.computation += "No letters matched.";
+				}
 
-
-				this.result = result;
 				this.showResult = true;
+				this.result = result;
 			}
 		}, 
 		viewComputation: function() {
@@ -129,7 +133,8 @@ function assessResult(total_letter_matches) {
 			result = "Soulmates";
 			break;
 		default: 
-			result = false;
+			result = "Strangers";
+			break;
 	}
 
 	return result;
