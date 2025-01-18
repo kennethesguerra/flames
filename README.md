@@ -4,4 +4,4 @@ A relationship calculator made using Vue JS.
 
 <p>I tried to automate it to exercise string manipulation and logic. I made it using Vue JS as an exercise as I was trying to learn the framework.</p>
 
-<p>Try it by visiting <a href="http://kennethesguerra.github.com/flames">http://kennethesguerra.github.com/flames </a></p>
+<p>Try it by visiting <a href="http://kennethesguerra.github.io/flames">http://kennethesguerra.github.com/flames </a></p>
